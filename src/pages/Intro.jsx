@@ -177,7 +177,7 @@ function Intro() {
           <KakaoLoginButton src='/images/KakaoLogo.png'>
           </KakaoLoginButton>
           <RegisterText>
-            <Join onClick={() => navigate('/register')}>회원가입</Join>
+            <Join onClick={() => navigate('/join')}>회원가입</Join>
             <Find onClick={() => navigate('/finduser')}>아이디/비밀번호 찾기</Find>
           </RegisterText>
         </LoginContainer>
