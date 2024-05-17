@@ -6,10 +6,10 @@ import Join from "./pages/Join";
 import Main from "./pages/Main";
 import Maindiary from "./pages/Maindiary";
 import MaindiaryTest from "./pages/MaindiaryTest";
-import Register from "./pages/Register";
+
 import Sitemap from "./pages/Sitemap";
 import Test from "./pages/Test";
-
+import Scan from "./pages/QrCode";
 
 const routes = [
     {
@@ -36,11 +36,11 @@ const routes = [
         element: <Main />,
         name: '메인 페이지'
     },
-    {
-        path: '/add',
-        element: <Add />,
-        name: '메인페이지_추가하기 페이지'
-    },
+    // {
+    //     path: '/add',
+    //     element: <Add />,
+    //     name: '메인페이지_추가하기 페이지'
+    // },
     {
         path: '/test',
         element: <Test />,
@@ -61,17 +61,11 @@ const routes = [
         element: <Album/>,
         name: '앨범내부'
     },
-    
-    {
-        path: '/register',
-        element: <Register />,
-        name: '회원가입 페이지'
-    },
-    {
-        path: '/finduser',
-        element: <FindUser />,
-        name: '아이디/비밀번호 찾기 페이지'
-    },
+    // {
+    //     path: '/scan',
+    //     element: <Scan/>,
+    //     name: 'QR 스캔하기'
+    // },
 ]
 
 export default routes;

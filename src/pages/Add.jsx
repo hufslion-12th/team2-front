@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useNavigate} from 'react'
 import styled from 'styled-components';
 import GalleryImg from "../images/GalleryImg.png"
 import ScanImg from "../images/ScanImg.png"
@@ -96,15 +96,25 @@ const CancelButton = styled.div`
   margin-left: 17px;
   padding-top: 5px;
   font-weight: bold;
+  cursor: pointer;
+  &:hover {
+    opacity: 0.8;
+  }
 `
 function Add({isOpen, closeModal, children}) {
+  const navigate = useNavigate();
+
+  const handleScan = () => {
+    // navigate('/scan')
+  };
+
   return (
   
    <ModalContainer style={{display: isOpen? "block" : "none"}}>
       <ModalTitle>무엇을 추가할까요?</ModalTitle>
         <CenterContainer>
           <LeftAddContainer>
-            <AddingContainer>
+            <AddingContainer onClick={handleScan}>
               <ScanIcon src={ScanImg}></ScanIcon>
               <IconText>{`스캔해서\n추가하기`}</IconText>
             </AddingContainer>
